@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dmall.dsf:dsf-sdk:2.8.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dsf/dsf-sdk/2.8.2-SNAPSHOT/dsf-sdk-2.8.2-20210928.113345-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dsf/dsf-sdk/2.8.2-SNAPSHOT/dsf-sdk-2.8.2-20210928.113345-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dsf/dsf-sdk/2.8.2-SNAPSHOT/dsf-sdk-2.8.2-20210928.113345-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+    <dubbo:registry address="zookeeper://10.248.224.74:2181?backup=10.248.224.66:2181,10.248.224.72:2181"
+                    timeout="1000000000"/>
+
+
+    <dubbo:protocol name="dubbo" port="-1"/>
+    <dubbo:application name="test-consumer-xxx"/>
+
+    <bean id="notifyService" class="test.service.notice.NotifyService"/>
+
+    <!--服务调用方标签 -->
+    <dubbo:reference id="demoService" interface="test.service.DemoService1" timeout="3000000" check="false" secret="awq34355egdt6u7ikut">
+        <dubbo:method name="asyncInvoke" async="true"/>
+
+        <dubbo:method name="helloOnEvent" timeout="60000" oninvoke="notifyService.onInvoke"
+                      onreturn="notifyService.onReturnWithoutParam" onthrow="notifyService.onThrow"/>
+    </dubbo:reference>
+
+    <dubbo:reference id="genericServiceDemo" interface="test.service.DemoServiceForGenericInvoke" timeout="3000000" group="group1"
+                     version="1.0.0" actives="10" generic="true" loadbalance="roundrobin"/>
+
+</beans>

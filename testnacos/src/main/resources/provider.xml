@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <dubbo:registry address="zookeeper://10.248.224.74:2181?backup=10.248.224.66:2181,10.248.224.72:2181"  timeout="1000000000"/>
+<!--        <dubbo:registry address="nacos://10.248.224.74:8848/?backup=10.248.224.66:8848,10.248.224.72:8848" timeout="1000000000"/>-->
+
+    <dubbo:metadata-report address="zookeeper://10.248.224.74:2181?backup=10.248.224.66:2181,10.248.224.72:2181"/>
+
+    <dubbo:protocol name="dubbo" port="-1"/>
+
+    <dubbo:application name="test-provider-xxx">
+        <dubbo:parameter key="qos.port" value="qos.port555"/>
+        <dubbo:parameter key="qos.name" value="qos.name123"/>
+        <dubbo:parameter key="qos.type" value="qos.type123"/>
+        <dubbo:parameter key="name" value="test-provider-045"/>
+<!--        <dubbo:parameter key="version" value="2.0.0"/>-->
+<!--        <dubbo:parameter key="owner" value="tester-owner-123"/>-->
+<!--        <dubbo:parameter key="organization" value="tester-ou"/>-->
+<!--        <dubbo:parameter key="architecture" value="tester-arch"/>-->
+<!--        <dubbo:parameter key="environment" value="tester-env"/>-->
+    </dubbo:application>
+
+<!--    <dubbo:module name="module-name" version="3.0.0" owner="tester-owner-234" organization="test-ou"/>-->
+    <dubbo:provider threads="2500" threadpool="cached" payload="8388608"/>
+
+    <bean class="com.dmall.dubbed.acl.DubbedAclHolder">
+        <property name="aclMap">
+            <map>
+                <entry key="awq34355egdt6u7ikut" value="1" />
+                <entry key="cnr5364twgnmk546uth" value="2" />
+                <entry key="enj54e46et65ryjmk45" value="3" />
+            </map>
+        </property>
+    </bean>
+
+    <!--服务暴露方标签 -->
+    <dubbo:service acl="true" protocol="dubbo" interface="test.service.DemoService1" ref="proxyService" timeout="1000"
+                   retries="3" loadbalance="random" actives="0" executes="10" delay="-1" scope="test"/>
+    <bean id="proxyService" class="test.service.DemoService1Impl"/>
+
+    <dubbo:service acl="true" protocol="dubbo" interface="test.service.DemoServiceForGenericInvoke" ref="loanAppService" group="group1" version="1.0.0"/>
+    <bean id="loanAppService" class="test.service.DemoServiceForGenericInvokeImpl"/>
+
+</beans>

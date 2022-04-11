@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<configuration>
+    <define name="INSTANCE_CODE" class="com.dmall.amp.log.logback.InstanceCodePropertyDefiner"/>
+    <property name="APP_LOG_HOME" value="/web/logs/app/${AMP_PRO_CODE}/${AMP_APP_CODE}/${INSTANCE_CODE}"/>
+    <property name="SUBSCRIBE_LOG_HOME" value="/web/logs/subscribe/${AMP_PRO_CODE}/${AMP_APP_CODE}/${INSTANCE_CODE}"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%c] [%X{tid}] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="APP_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${APP_LOG_HOME}/all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${APP_LOG_HOME}/all.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>10GB</maxFileSize>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%C] [%X{tid}] - %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="TOPIC_LOG1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${SUBSCRIBE_LOG_HOME}/${AMP_PRO_CODE}#SP#${AMP_APP_CODE}#SP#polar_biz_polar_per_test_1_1#SP#topic1.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${SUBSCRIBE_LOG_HOME}/topic1.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>10GB</maxFileSize>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%C] [%X{tid}] - %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="TOPIC_LOG2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${SUBSCRIBE_LOG_HOME}/${AMP_PRO_CODE}#SP#${AMP_APP_CODE}#SP#polar_biz_polar_per_test_1_2#SP#topic2.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${SUBSCRIBE_LOG_HOME}/topic2.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>10GB</maxFileSize>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%C] [%X{tid}] - %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="TOPIC_LOG3" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${SUBSCRIBE_LOG_HOME}/${AMP_PRO_CODE}#SP#${AMP_APP_CODE}#SP#polar_biz_polar_per_test_1_3#SP#topic3.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${SUBSCRIBE_LOG_HOME}/topic3.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>10GB</maxFileSize>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%C] [%X{tid}] - %m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="com.dmall.testlog.service.Topic1Service" level="DEBUG">
+        <appender-ref ref="TOPIC_LOG1" />
+    </logger>
+    <logger name="com.dmall.testlog.service.Topic1Service" level="DEBUG">
+        <appender-ref ref="TOPIC_LOG2" />
+    </logger>
+    <logger name="com.dmall.testlog.service.Topic1Service" level="DEBUG">
+        <appender-ref ref="TOPIC_LOG3" />
+    </logger>
+
+    <logger name="com.dmall.testlog.service.PolarService" level="DEBUG">
+        <appender-ref ref="APP_LOG" />
+    </logger>
+    <root level="error">
+        //有显示指定了logger按照指定的
+        //没有显示指定了logger就跟随root的
+        <appender-ref ref="STDOUT"/>
+<!--        <appender-ref ref="APP_LOG" />-->
+    </root>
+</configuration>

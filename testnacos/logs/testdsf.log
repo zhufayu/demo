@@ -1,0 +1,24 @@
+[ERROR] 2021-06-11 09:57:11.788 [main-EventThread] [org.apache.curator.framework.imps.CuratorFrameworkImpl] [] - Background exception was not retry-able or retry gave up
+java.lang.IllegalStateException: instance must be started before calling this method
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:444)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkExists(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.wasDeleted(TreeCache.java:326)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.processResult(TreeCache.java:479)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.sendToBackgroundCallback(CuratorFrameworkImpl.java:865)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.processBackgroundOperation(CuratorFrameworkImpl.java:635)
+	at org.apache.curator.framework.imps.WatcherRemovalFacade.processBackgroundOperation(WatcherRemovalFacade.java:152)
+	at org.apache.curator.framework.imps.GetDataBuilderImpl$3.processResult(GetDataBuilderImpl.java:272)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:575)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:508)
+[ERROR] 2021-06-11 09:57:11.792 [main-EventThread] [org.apache.curator.framework.imps.CuratorFrameworkImpl] [] - Background exception was not retry-able or retry gave up
+java.lang.IllegalStateException: instance must be started before calling this method
+	at org.apache.curator.shaded.com.google.common.base.Preconditions.checkState(Preconditions.java:444)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkExists(CuratorFrameworkImpl.java:432)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.wasDeleted(TreeCache.java:326)
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.processResult(TreeCache.java:433)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.sendToBackgroundCallback(CuratorFrameworkImpl.java:865)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.processBackgroundOperation(CuratorFrameworkImpl.java:635)
+	at org.apache.curator.framework.imps.WatcherRemovalFacade.processBackgroundOperation(WatcherRemovalFacade.java:152)
+	at org.apache.curator.framework.imps.GetChildrenBuilderImpl$2.processResult(GetChildrenBuilderImpl.java:187)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:604)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:508)

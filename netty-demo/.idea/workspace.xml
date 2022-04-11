@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="928a86be-411a-4553-9874-cde15fc327ff" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dLLWXu3JLzArjV5IT7DmnO3ONB" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="test.dmall.socket.simdemo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test.dmall.server_client.client" />
+      <recent name="test.dmall.httpproxy.bootstrap" />
+      <recent name="test.dmall.lightingSimpleChannelPool" />
+      <recent name="test.dmall.lightling" />
+      <recent name="test.dmall.http.httpclientPool" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\nettydemo\src\main\java\test\dmall\httpproxy" />
+      <recent name="C:\zfy\note\java\mycode\testnio\src\main\resources" />
+      <recent name="C:\Users\Dmall-CD-Tech01\Desktop\testnio\src\main\java\test\dmall\websocket" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.NIOClient">
+    <configuration name="NIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.dmall.nio.NIOClient" />
+      <module name="nettydemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dmall.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.dmall.nio.NIOServer" />
+      <module name="nettydemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dmall.nio.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.dmall.netty.server_client.client.NettyClient" />
+      <module name="nettydemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dmall.netty.server_client.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketClientTest" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.dmall.nio.demo.SocketClientTest" />
+      <module name="nettydemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dmall.nio.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.dmall.nio.demo.SocketServerTest" />
+      <module name="nettydemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dmall.nio.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.NettyClient" />
+      <item itemvalue="Application.SocketServerTest" />
+      <item itemvalue="Application.SocketClientTest" />
+      <item itemvalue="Application.NIOServer" />
+      <item itemvalue="Application.NIOClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NIOClient" />
+        <item itemvalue="Application.NIOServer" />
+        <item itemvalue="Application.SocketClientTest" />
+        <item itemvalue="Application.SocketServerTest" />
+        <item itemvalue="Application.NettyClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="928a86be-411a-4553-9874-cde15fc327ff" name="Default Changelist" comment="" />
+      <created>1592199458213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592199458213</updated>
+      <workItem from="1592199459569" duration="9614000" />
+      <workItem from="1592274344151" duration="8897000" />
+      <workItem from="1592294328033" duration="4068000" />
+      <workItem from="1594104066285" duration="1548000" />
+      <workItem from="1594610095422" duration="918000" />
+      <workItem from="1594626504502" duration="1436000" />
+      <workItem from="1594630318278" duration="15577000" />
+      <workItem from="1595497088808" duration="24588000" />
+      <workItem from="1595841020457" duration="3225000" />
+      <workItem from="1597199026721" duration="1267000" />
+      <workItem from="1597299231021" duration="318000" />
+      <workItem from="1597370041780" duration="2631000" />
+      <workItem from="1597375536568" duration="1517000" />
+      <workItem from="1597648719337" duration="450000" />
+      <workItem from="1598433976904" duration="3760000" />
+      <workItem from="1620701204656" duration="2155000" />
+      <workItem from="1620709800952" duration="6832000" />
+      <workItem from="1620717907527" duration="5000" />
+      <workItem from="1620718337959" duration="68000" />
+      <workItem from="1620783674133" duration="17128000" />
+      <workItem from="1620890403654" duration="3552000" />
+      <workItem from="1620900846185" duration="675000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
